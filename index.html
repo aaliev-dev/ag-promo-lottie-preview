@@ -183,8 +183,8 @@
   const artAfter = document.getElementById('art-after');
 
   function fileName(theme, variant) {
-    const base = variant === 'wide' ? 'lottie_promo_power_up_sw361dp' : 'lottie_promo_power_up';
-    return theme === 'light' ? base + '_light.json' : base + '.json';
+    const suffix = variant === 'wide' ? '_sw361dp' : '';
+    return 'lottie_promo_power_up' + (theme === 'light' ? '_light' : '') + suffix + '.json';
   }
 
   function download(theme) {
